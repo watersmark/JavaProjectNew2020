@@ -8,6 +8,7 @@ class Test_Static{
 class Test_Static_UnStatic{
 
     public static int xor1 = 32;
+    public int x = 3232;
 
     public static void set_xor1(int x){
         xor1 = x;
@@ -17,6 +18,11 @@ class Test_Static_UnStatic{
         System.out.println(xor1);
         set_xor1(12);
         System.out.println(xor1);
+    }
+
+    public void test_peremennix(int x){
+
+        System.out.println(this.x);
     }
 }
 
@@ -32,5 +38,6 @@ public class main {
 
         Test_Static_UnStatic  first1 = new Test_Static_UnStatic();
         first1.get_xor1();
+        first1.test_peremennix(333);
     }
 }
