@@ -2,26 +2,28 @@ import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) {
+        /*
+       Morfizm morfizm = new Morfizm(55);
+       morfizm.agee(12);
+       morfizm.test_class();
+       System.out.println(add_area.time_one);
+         */
 
-        Isomorf first = new Isomorf(32);
-        Isomorf second = new Isomorf(12, true);
+       try{
+           StaticClass.ages(12);
+       }
 
-        ArrayList<ClassesTest> list_f = new ArrayList<ClassesTest>();
-        list_f.add(first);
-        list_f.add(second);
-        list_f.add(new Polymorf());
-        list_f.add(new Polymorf(12,true));
+       catch (ArithmeticException p){
+           System.out.println(p.getMessage());
+       }
 
-        for(ClassesTest item : list_f){
+       catch (RuntimeException e){
+           System.out.println(e.getMessage());
+           System.out.println("Drop error");
+       }
 
-            if(item instanceof Polymorf){
-                item.information();
-                System.out.println(((Polymorf) item).agree);
-            }
-            if(item instanceof Isomorf){
-                ((Isomorf) item).isomorf_hash((int) (Math.random() * 10));
-                System.out.println(((Isomorf) item).agree);
-            }
-        }
+       finally {
+           System.out.println("It is end");
+       }
     }
 }

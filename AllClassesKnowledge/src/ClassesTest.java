@@ -1,3 +1,10 @@
+interface add_area{
+
+    static int time_one = 0;
+    abstract public void test_class();
+
+}
+
 abstract  public class ClassesTest {
 
     ClassesTest(int time_works){
@@ -35,6 +42,7 @@ abstract  public class ClassesTest {
 
 class Polymorf extends  ClassesTest{
     boolean agree;
+
 
     // Основной кон структор
     Polymorf(int time_works, boolean agree){
@@ -84,5 +92,27 @@ class Isomorf extends ClassesTest{
 
     public void isomorf_hash(int hash){
         System.out.println("Is it isomorf hash" + hash);
+    }
+}
+
+class Morfizm extends ClassesTest implements add_area{
+
+    Morfizm(int time_work){
+        super(time_work);
+    }
+
+    @Override
+    public void test_class() {
+        System.out.println("This is interfacr implement");
+    }
+
+    @Override
+    void information() {
+        System.out.println("This is morfizm class");
+    }
+
+    @Override
+    public int agee(int ages) {
+        return ages + 3;
     }
 }

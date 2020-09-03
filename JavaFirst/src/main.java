@@ -31,23 +31,14 @@ public class main {
 
     public static void main(String[] args) {
 
-        RuntimeException first = new RuntimeException();
-        int x = 0;
+        Integer x = 1;
+        Integer y = 2;
 
-        try{
-            if(x == 0){
-                throw first;
-            }
+        if(x.equals(y)){
+            System.out.println("GG");
         }
-
-        catch(Exception e){
-           String a = e.getMessage();
-            //System.out.println(a);
-            System.out.println("its message");
-        }
-
-        finally{
-            System.out.println("New message");
+        else{
+            System.out.println("BB");
         }
     }
 }
