@@ -3,16 +3,13 @@ package Mains.Cains;
 public class main {
     public static void main(String[] args) {
 
-        
-        int[][] mass = new int[6][];
-        int[] mass_temp = new int[mass.length];
+        int[][][] mass = new int[3][4][5];
+        //int s = 1;
 
-        for(int i = 0; i< 6; i++){
-            mass[i] = new int[i + 1];
-        }
 
-        for(int i= 0; i < 6; i++){
-            System.out.println(mass[i].length);
-        }
+        System.out.println(mass[0].length);
+        System.out.println(mass[0][1].length);
+        System.out.println();
+
     }
 }
