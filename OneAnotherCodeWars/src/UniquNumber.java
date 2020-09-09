@@ -10,16 +10,18 @@ class Kata {
             sum += arr[i];
         }
 
-        if (arr[0] != arr[1]) {
-            if (arr[1] != arr[2]) {
-                elem = arr[0];
-            }
-        } else {
+        if (arr[0] == arr[1]) {
+            elem = arr[0];
+        }
+        else if(arr[0] != arr[2]){
+            elem = arr[2];
+        }
+        else{
             elem = arr[0];
         }
 
         Double digit = sum - (elem * (arr.length - 1));
-        double temp_digit = Double.parseDouble(String.format("%.2f", digit).replace(',', '.'));
+        double temp_digit = Double.parseDouble(String.format("%.13f", digit).replace(',', '.'));
 
         return temp_digit;
     }
@@ -29,7 +31,7 @@ class Kata {
 public class UniquNumber {
     public static void main(String[] args) {
 
-        System.out.println(Kata.findUniq(new double[]{0.561, 0.54, 0.561, 0.561, 0.561, 0.561}));
+        System.out.println(Kata.findUniq(new double[]{9.0, 9.0, 2.0, 9.0, 9.0}));
 
     }
 }
